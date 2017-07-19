@@ -1,0 +1,18 @@
+{	
+	"testUrl":"http://static.tcy365.org:1505/uc/tchallvip/assets/",
+	"staticUrl":"http://static.tcy365.com/uc/tchallvip/assets/",
+	"seajs":[
+		{"Entry":"/assets/js/app/","Out":"/assets/js/app/","Name":"main.js"},
+		{"Entry":"/assets/js/app2/","Out":"/assets/js/app2/","Name":"main.js"}
+	],	
+	"build":"build",	
+	"test":"test",
+	"src":"src",
+	"sprite":"sprite",
+	"static":"static",
+	"staticJs":"/assets/js/",	
+	"staticCss":"/assets/css/",	
+	"staticImg":"/assets/img/",
+	"staticTpl":"/assets/tpl/",
+	"staticTplhtml":"/assets/tplhtml/"
+}
