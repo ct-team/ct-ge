@@ -3,9 +3,10 @@
  {{each list as value i}}
     <li data-id="{{value.itemId}}">
         <div class="list-items-item">
+        	{{if value.cornerIcon}}<s class="corner"><img src="{{value.cornerIcon}}" width="40" height="40"></s>{{/if}}
             <div class="img"><img src="{{value.image}}" width="108" height="108"></div>
-            <p class="til"><span class="J_list_name">{{value.itemName}}</span><span class="til-f">({{value.unitName}})</span></p>
-            <p class="pirce">(<i class="ico ico-member ico-member-on"></i>LV{{value.memLevel}}及以上)</p>
+            <p class="til"><span class="J_list_name">{{value.itemName}}</span><span class="til-f">(一个月)</span></p>
+            <p class="pirce">(<i class="ico ico-member ico-member-on{{value.memLevel}}"></i>及以上)</p>
             <div class="btn">{{if value.obtained}}<a href="javascript:;" class="btn-buy btn-buy-no">已领取</a>{{else}}<a href="javascript:;" class="btn-buy J_btn_buy">领取</a>{{/if}}<a href="javascript:;" data-url="{{value.portrait}}" class="btn-try J_btn_try" title="试穿">试穿</a></div>
         </div>
     </li>

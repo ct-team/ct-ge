@@ -1,0 +1,18 @@
+.tcshopvip{ background: url(../img/grade.jpg) no-repeat center 0px; position:relative;zoom:1; width:100%;overflow:hidden;}
+.tcshopvip .list-box{ border:none;}
+.vip-grade { overflow: hidden; position: relative; height: 490px; width: 100%; }
+.vip-grade ul { width: 700px; padding: 10px 0px 0px 10px; height:440px; }
+.vip-grade ul li { float: left; height: 410px; width: 196px; margin-right: 26px;text-align: center; position:relative; }
+.vip-grade ul li .pic{ padding-top: 6px; height:330px; }
+.vip-grade-tip { line-height: 20px; background: #e1e1e1; height: 20px; font-size: 12px; color: #333; padding: 5px 20px; float: left; margin-left:20px;_margin-left:10px;}
+.vip-grade-tip .b1 { text-decoration: underline; padding: 0px 5px; color: #167adc; }
+.vip-grade-tip .b1:hover{color: #167adc; text-decoration: underline; }
+.vip-grade-tip .b2{ margin-left:10px;}
+.vip-grade-tip .b2 img { vertical-align: middle; }
+.vip-grade ul li p .fmp { background-position: -53px -381px; display: inline-block; height: 28px; width: 59px; overflow: hidden; line-height: 28px; color: #FFF; vertical-align: middle; }
+.vip-grade ul li p { line-height: 22px; color: #000; font-size: 12px; }
+
+.vip-grade .btn{ padding:10px;}
+.vip-grade .btn a { font-size: 14px; line-height: 28px; display: inline-block; height: 28px; text-align: center; overflow: hidden; margin: 0 2px; vertical-align: middle; }
+.vip-grade .btn .btn-try{width: 27px; text-indent:-999px;background-position:-106px -323px;}
+.vip-grade .btn .btn-try:hover{background-position:-106px -294px;}

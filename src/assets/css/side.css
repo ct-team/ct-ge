@@ -1,0 +1,31 @@
+.tcshop { margin: 0px auto; width: 860px; overflow: hidden; height: 585px; padding-top:10px; }
+.tcshop-side { float: left; width: 205px; }
+.pic-show,.my-goods,.side-tip{ margin-top:10px;}
+.try-on { background: #f2f2f2; height: 334px; border: 1px solid #e3e3e3; }
+.try-on-hd { height: 30px; position: relative; width: 188px; margin: 0px auto; }
+.try-on-hd-username{ margin-left: 5px; line-height: 30px; display: inline-block; }
+.try-on-hd-refresh{background-position: -458px -116px; height: 20px; width: 20px; position: absolute; top: 5px; right: 0px; }
+.try-on-md { background-position: 0 0; height: 294px; width: 188px; margin: 0px auto; position: relative; }
+.try-on-md-closetry { background-position: -21px -357px; position: absolute; top: 10px; right: 12px; height: 61px; width: 15px; }
+.try-on-md-define { height: 22px; position: absolute; bottom: 10px; left: 10px; right: 0px; }
+.my-goods { background: #f4f4f4; text-align: center; height: 46px; border: 1px solid #e3e3e3; font-size: 16px;  color: #666; display: block; font-weight:700; }
+.my-goods .text{line-height: 45px; display:inline-block;}
+.my-goods .ico-box{ margin-right:10px;}
+.pic-show { height: 138px; }
+.side-tip { line-height: 27px; text-align: center; height: 27px; }
+.side-tip .hot{ color: #df1010; }
+
+.side-tip-vip{ color: #528ad0; }
+.ico-box { background-position: -458px -136px; display: inline-block; height: 18px; width: 22px; }
+.try-on-md-clothes img { margin-top: 10px; }
+.try-on-md-defin-sex { float: right; width: 64px; }
+.try-on-md-defin-sex a {display: inline-block; height: 19px; width: 22px; border: 1px solid #cccccc; margin-right:5px; }
+.try-on-md-defin-sex a:hover{border: 1px solid #ff6600;}
+.try-on-md-defin-sex .male{ background-position: -420px -155px;}
+.try-on-md-defin-sex .female{background-position:-443px -155px;}
+.try-on-md-clothes { text-align: center; position:relative; }
+.try-on-md-define-buy { line-height: 23px; color: #FFF; background-position: -235px -294px; text-align: center; float: left; height: 23px; width: 89px; }
+.try-on-md-define-buy:hover{ background-position:-235px -318px;color: #FFF;}
+.login-state { position: absolute; width: 100%; left: 0px; top: 120px; right: 0px; text-align: center; z-index:5; }
+.login-state-btn { line-height: 23px; color: #FFF; background-position: -235px -294px; text-align: center; display: inline-block; height: 23px; width: 89px; }
+.login-state-btn:hover { background-position:-235px -318px; color:#FFF;}

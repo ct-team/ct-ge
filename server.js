@@ -1,7 +1,7 @@
 var version = "2.0.0";
-var http = require('http');        
-var fs = require('fs');            
-var server = new http.Server();    
+var http = require('http');        // Http服务器API
+var fs = require('fs');            // 用于处理本地文件
+var server = new http.Server();    // 创建新的HTTP服务器
 var httpOpt;
 var dataConfig;
 fs.readFile('./serverPackage.json', function (err, data) {
@@ -11,7 +11,7 @@ fs.readFile('./serverPackage.json', function (err, data) {
     dataConfig = JSON.parse(data);
     httpOpt = dataConfig.config;
     var port = httpOpt.serverPort || 8000;
-    server.listen(port);            
+    server.listen(port);            // 监听端口8000
     start();
     console.log('start port:' + port);
 });

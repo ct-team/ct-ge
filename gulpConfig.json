@@ -1,5 +1,5 @@
 {	
-	"testUrl":"http://static.tcy365.org:1505/uc/tchallvip/assets/",
+	"testUrl":"./assets/",
 	"staticUrl":"http://static.tcy365.com/uc/tchallvip/assets/",
 	"seajs":[
 		{"Entry":"/assets/js/app/","Out":"/assets/js/app/","Name":"main.js"},

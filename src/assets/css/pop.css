@@ -1,0 +1,83 @@
+.tcpop-md-price,.tcpop-md-btn{ margin-top:5px;}
+.tcpop { overflow: hidden; zoom: 1; padding: 25px 12px 10px; }
+.tcpop-mask{ display: none; position: absolute; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; z-index: 99; height: 100%; background-image:url(#); }
+.tcpop-sd { width: 142px; float: left; }
+.tcpop-sd-img { text-align: center; height: 120px; }
+.tcpop-sd-img img { padding: 2px; border: 1px solid #f3f3f3; }
+.tcpop-sd-tip { line-height: 20px; text-align: center; }
+.tcpop-md { float: left; width: 280px; }
+.tcpop-md-title { font-size: 16px; line-height: 30px; color: #424242; height: 30px; margin-bottom: 5px; }
+.tcpop-md-title .ico-member{ margin-left:5px;}
+.tcpop-md-content { background: #fffbf1; padding: 10px 15px; font-size: 14px; position:relative; overflow:hidden; }
+.tcpop-md-content .item { padding: 2px 0;zoom:1;position:relative; height:20px;}
+.tcpop-md-content .sendinput,.tcpop-md-content .sendinputmsg{border: 1px solid #CCC; vertical-align:middle; padding: 0px 5px;}
+.tcpop-md-content .item-number{ padding-bottom:5px; height:24px;}
+.tcpop-md-content .sendinput{ line-height: 24px; height:24px; width:130px;  }
+.tcpop-md-content .sendinputmsg{line-height: 18px; resize: none;}
+.tcpop-md-content .senduser_tip{ padding-left:5px;}
+.tcpop .c-o { color: #ff6600; }
+.tcpop-md-price,.tcpop-md-pwd{ line-height: 30px; }
+.tcpop-md-pwd{ margin-bottom:10px; position:relative;}
+.tcpop-md-price .price { font-size: 20px; font-weight: 700; }
+.tcpop-md-content .item .member { margin-left: 5px;font-size: 12px; }
+.tcpop-md-btn .buy { font-size: 18px; line-height: 43px; font-weight: 700; color: #FFF; background-position: -291px -116px; height: 43px; width: 129px; display: inline-block; text-align: center; vertical-align: bottom; margin-right: 10px; }
+.tcpop-md-btn .buy:hover{ background-position:-291px -160px;color: #FFF;}
+.tcpop-md-btn .tip { line-height: 30px; color: #f21f01; vertical-align: bottom; height: 30px; }
+.tcpop-md-btn .gochange{ vertical-align: bottom; }
+.tcpop-md-btn-vip{ line-height:43px; margin-top:5px;}
+.timetypelist{ overflow: hidden; zoom: 1; padding-top: 5px; position:relative; *padding-bottom:5px; _padding-bottom:0;}
+.timetypelist a { margin: 0px 10px 10px 0px; float: left; height: 32px; width: 68px; border: 1px solid #d5d5d5; line-height: 32px; color: #424242; text-align: center; display: block; background: #FFF; font-size: 14px; position: relative; }
+.timetypelist a:hover,.timetypelist .on,.timetypelist .on:hover{color: #ff6600; border: 1px solid #ff6600; }
+.timetypelist a .text{ line-height: 30px; display: block; height: 30px; border: 1px dashed #FFF; }
+.timetypelist a:hover .text,.timetypelist .on .text,.timetypelist .on:hover .text{ border: 1px solid #ff6600; }
+.timetypelist .ico-gou{ display:none;}
+.timetypelist .on .ico-gou { position: absolute; right: 0px; bottom: 0px; display:block; }
+.tcpop-md-title .small { font-size: 12px; color: #999999; }
+.tcpop-md-price .item-label,.tcpop-md-pwd .item-label { font-size: 14px; }
+.tcpop-md-pwd .pwd { line-height: 24px; height: 24px; width: 120px; border: 1px solid #d5d5d5; padding: 0px 5px; }
+.tcpop-md-pwd .forget {margin-left: 5px; }
+.pop-number { height: 24px; display: inline-block;}
+.pop-number .button{ font-size: 16px; height: 24px; width: 24px; border: 1px solid #CCC; display: inline-block; text-align: center; background: #f3f3f3; font-weight: 700; cursor: default; color: #cdcdcd; vertical-align: middle; }
+.pop-number .button-on{background: #fff;cursor: pointer;color: #666;}
+.pop-number .button-on:hover{color: #ff6600;border: 1px solid #ff6600;}
+.pop-number-text{ font-size: 14px; line-height: 24px; height: 24px; width: 50px; border-top: 1px solid #CCC; border-bottom: 1px solid #CCC; text-align: center; border-left: 0; border-right: 0; vertical-align: middle; }
+.tcpop-md .item-label { line-height: 24px; }
+.pop-address{ margin-top:10px;}
+.pop-address .address{ line-height: 20px; padding: 5px 10px; border: 1px solid #CCC; min-height:40px; _height:40px; }
+.pop-address .address-til{ font-weight:700;}
+.pop-address .address-til-name{ margin-right: 10px; }
+.pop-address .til { font-size: 14px; line-height: 24px; font-weight: 700; height: 24px; position: relative; }
+.pop-address .til a { position: absolute; top: 0px; right: 0px; font-size: 12px; font-weight: 400; }
+.tcpop-md-type { line-height: 24px; color: #FFF; background: #ffa163; height: 24px; padding-left: 20px; font-size: 14px; }
+.tcpopbox { border: 2px solid #577037; width: 360px; background: #FFF; }
+.tcpopbox-hd { line-height: 27px; background: #91b472; height: 27px; border-bottom: 1px solid #7bb230; position: relative; }
+.tcpopbox-hd-til { color: #424242; padding-left: 10px; }
+.tcpopbox-hd-close { font-size: 16px; line-height: 27px; color: #FFF; text-align: center; position: absolute; height: 27px; width: 27px; top: 0px; right: 0px; }
+.tcpopbox-md-loading { height: 70px; }
+.ui_content, .ui_title, .ui_buttons input{ font-family:"Microsoft YaHei",微软雅黑;}
+.tcpop-result-til { font-size: 22px; line-height: 30px; color: #ff6600; margin-bottom: 10px; }
+.tcpop-result-con { line-height: 20px; color: #999999; background: #f3f3f3; padding: 10px;margin-bottom: 10px; }
+.tcpop-result-con .til { font-size: 14px; color: #424242; margin-bottom:5px; }
+.tcpop-result-btn .button { line-height: 37px; color: #FFF; background-position: -188px -116px; text-align: center; display: inline-block; height: 37px; width: 103px; font-size: 16px; letter-spacing: 10px; text-indent:10px;*text-indent:0;}
+.tcpop-result-btn .button:hover{background-position:-188px -154px;}
+.tcpop-result-btn .button2,.tcpop-result-btn .button2:hover { color: #FFF; background-position:-188px -192px;}
+
+
+.tcpop-md-pwd .setpaypwd { font-size: 14px; line-height: 26px; text-align: center; display: inline-block; height: 26px; border: 1px solid #CCC; padding: 0px 10px; }
+.tcpopaddr{ padding-bottom:20px;}
+.tcpopaddr-list{ padding: 15px 30px 0px; height:350px; }
+.tcpopaddr-list label{padding: 5px 5px 5px 0; position: relative;display: block;background: #FFF; border: 1px solid #e5e5e5;}
+.tcpopaddr-list a { line-height: 24px;  display: block;  margin-bottom: 10px; color: #424242; cursor:pointer; }
+.tcpopaddr-list a:hover label,.tcpopaddr-list a.on label,.tcpopaddr-list a.on:hover label{ color:#ff6600;border: 1px solid #ffc39b;background: #fffbf1;}
+.tcpopaddr-list h3,.tcpopaddr-list p{cursor:pointer; padding-left:40px;}
+.tcpopaddr-list h3 span { margin-right: 10px; }
+.tcpopaddr-list a input { position: absolute; left: 20px; top: 11px; *top:8px; }
+.tcpopaddr .tcpop-result-btn { text-align: center; }
+.tcpopaddr .button{ margin: 0px 5px; }
+.tcpopbox-md{ font-size: 16px; font-weight: 700; text-align: center; padding: 40px 20px; line-height: 30px; }
+.tcpopbox-md-content { padding-left: 84px; position: relative; font-weight: 400; text-align: left;zoom:1;}
+.tcpopbox-ico { position: absolute; left:10px; top: 50%; margin-top:-25px; height: 50px; width: 50px;background: url(../img/ico-judge.png) no-repeat; }
+.tcpopbox-ico-ok{ background-position:0 0;}
+.tcpopbox-ico-error{background-position:-50px 0;}
+.tcpopbox-md-content p { line-height: 22px;}
+.tcpopbox-md-content .f12{ font-size:12px;}
