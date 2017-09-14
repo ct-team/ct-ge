@@ -10,7 +10,7 @@ GulpEngineering 能帮你按配置自动合并打包成测试版与正式版，�
 
 ## 下载地址
 
-github [0.0.2](https://github.com/ct-team/ct-ge)
+github https://github.com/ct-team/ct-ge
 
 ## 安装 =====
 
