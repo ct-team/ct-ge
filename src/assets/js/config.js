@@ -1,3 +1,7 @@
+/**
+ * @file seajsconfig
+ * @author daixl
+ */
 seajs.config({
     base:'./assets/js/app/',
     'map': [

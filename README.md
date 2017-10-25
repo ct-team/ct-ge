@@ -6,7 +6,7 @@ GulpEngineering 能帮你按配置自动合并打包成测试版与正式版，�
 
 ## 版本 
 
-0.0.2
+0.1.0
 
 ## 下载地址
 
@@ -17,21 +17,46 @@ github https://github.com/ct-team/ct-ge
 执行 npm install 安装
 
 ## 文件夹说明
-
-/assets 资源文件
-
-/assets/css 样式文件
-
-/assets/js 脚本文件
-
-/assets/js/app seajs文件 主文件名默认用 main.js
-
-/assets/img 图片文件
-
-/assets/tpl js生成模板文件
-
-/assets/tplhtml 模板文件
-
+```
+{
+  "htmlUrl": "assets/", //页面资源标识（页面替换）
+  "htmlReplaceUrl": "//static.tcy365", //资源站路径
+  "htmlAssetsUrl": "/uc/tt/", //资源站项目文件夹
+  "replaceUrl": "[TCYURL]", //资源站端口标识（全局替换）
+  "staticUrl": ".com",
+  "preUrl": ".com:2505",
+  "testStaticUrl": ".org:1505",
+  "testUrl": ".org:1507",
+  "devUrl": ".org:1506",  
+  "seajs": [
+    {
+      "Entry": "/assets/js/app/",
+      "Out": "/assets/js/app/",
+      "Name": "main.js"
+    },
+    {
+      "Entry": "/assets/js/app2/",
+      "Out": "/assets/js/app2/",
+      "Name": "main.js"
+    }
+  ],
+  "jsdocFlag": true,
+  "jsdoc": "jsdoc",
+  "build": "build",
+  "dev": "build_dev",
+  "test": "build_test",
+  "testStatic": "build_testStatic",
+  "pre": "build_pre",
+  "static": "build_static",
+  "src": "src",
+  "sprite": "sprite",
+  "staticJs": "/assets/js/",
+  "staticCss": "/assets/css/",
+  "staticImg": "/assets/img/",
+  "staticTpl": "/assets/tpl/",
+  "staticTplhtml": "/assets/tplhtml/"
+}
+```
 ## 合并说明
 
 通过build 可以在页面上方便把要合并的资源进行合并 放到指定的路径 并不影响src的测试
@@ -61,34 +86,28 @@ github https://github.com/ct-team/ct-ge
 配置文件gulpConfig.json
 
 ```
-// 测试版地址与正式版地址能把页面上的 static/ 替换成下面地址
-//测试版地址
-"testUrl":"http://static.tcy365.org:1505/uc/tchallvip/assets/",
-//正式版地址
-"staticUrl":"http://static.tcy365.com/uc/tchallvip/assets/",
+// 需要你修改的地方
+
+"htmlAssetsUrl": "/uc/tt/", //资源站项目文件夹
 // js/app seajs打包配置 多个页面可创建多个app
 "seajs":[
 	{"Entry":"/assets/js/app/","Out":"/assets/js/app/","Name":"main.js"},
 	{"Entry":"/assets/js/app2/","Out":"/assets/js/app2/","Name":"main.js"}
 ],	
-//下面是文件配置不需要修改
-"build":"build",	
-"test":"test",
-"src":"src",
-"sprite":"sprite",
-"static":"static",
-"staticJs":"/assets/js/",	
-"staticCss":"/assets/css/",	
-"staticImg":"/assets/img/",
-"staticTpl":"/assets/tpl/",
-"staticTplhtml":"/assets/tplhtml/"
+
 ```
 
 ## 生成
 
 执行gulp
 
-生成test 测试版
+生成build_dev 开发版
 
-生成static 正式版
+生成build_test 提测版
+
+生成build_testStatic 测试稳定版
+
+生成build_pre 预发版
+
+生成build_static 正式版
 

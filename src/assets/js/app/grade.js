@@ -1,4 +1,8 @@
-define(function(require) {	
+/**
+ * 等级模块
+ * @module
+ */
+define(function(require) {
 	var level = 0;
 	function init(callback){
 		bind(callback);
@@ -17,7 +21,13 @@ define(function(require) {
 		return level;	
 	}
 	return {
+        /**
+         * 初始化
+         */
 		init:init,
+        /**
+         * 获得等级
+         */
 		getLevel:getLevel		
 	}
 });

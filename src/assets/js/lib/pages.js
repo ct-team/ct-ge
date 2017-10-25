@@ -1,3 +1,7 @@
+/**
+ * @file 分页器
+ * @author daixl
+ */
 (function () {
     $.fn.pages = function (opts) {
         var option = $.extend({

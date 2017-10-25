@@ -1,3 +1,7 @@
+/**
+ * 服装模块
+ * @module
+ */
 define(function(require) {
 	var initFlag = false,
 		list = require('../../tpl/list'),
@@ -92,6 +96,9 @@ define(function(require) {
 	}
 	
 	return {
+		/**
+		 * 初始化
+		 */
 		init:init		
 	};
 });
