@@ -1,3 +1,9 @@
+/**
+ * @file 分页器
+ * @author daixl
+ */
+
+
 (function () {
     $.fn.pages = function (opts) {
         var option = $.extend({
@@ -123,6 +129,10 @@
 
             }
 
+            /**
+             * ddd
+             * @param n {number} 当前页码
+             */
             function selectItem(n) {
 				if(!n || n < 1 || n > option.pageNum){
 					return;	

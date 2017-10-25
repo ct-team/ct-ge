@@ -1,3 +1,7 @@
+/**
+ * @file 滚动插件
+ * @author daixl
+ */
 (function ($) {
     $.fn.slider = function (opts) {		
 		var o = $.extend({

@@ -1,18 +1,38 @@
-{	
-	"testUrl":"./assets/",
-	"staticUrl":"http://static.tcy365.com/uc/tchallvip/assets/",
-	"seajs":[
-		{"Entry":"/assets/js/app/","Out":"/assets/js/app/","Name":"main.js"},
-		{"Entry":"/assets/js/app2/","Out":"/assets/js/app2/","Name":"main.js"}
-	],	
-	"build":"build",	
-	"test":"test",
-	"src":"src",
-	"sprite":"sprite",
-	"static":"static",
-	"staticJs":"/assets/js/",	
-	"staticCss":"/assets/css/",	
-	"staticImg":"/assets/img/",
-	"staticTpl":"/assets/tpl/",
-	"staticTplhtml":"/assets/tplhtml/"
+{
+  "replaceUrl": "[TCYURL]",
+  "staticUrl": ".com",
+  "preUrl": ".com:2505",
+  "testStaticUrl": ".org:1505",
+  "testUrl": ".org:1507",
+  "devUrl": ".org:1506",
+  "htmlUrl": "assets/",
+  "htmlReplaceUrl": "//static.tcy365",
+  "htmlAssetsUrl": "/uc/tt/assets/",
+  "seajs": [
+    {
+      "Entry": "/assets/js/app/",
+      "Out": "/assets/js/app/",
+      "Name": "main.js"
+    },
+    {
+      "Entry": "/assets/js/app2/",
+      "Out": "/assets/js/app2/",
+      "Name": "main.js"
+    }
+  ],
+  "jsdocFlag": true,
+  "jsdoc": "jsdoc",
+  "build": "build",
+  "dev": "build_dev",
+  "test": "build_test",
+  "testStatic": "build_testStatic",
+  "pre": "build_pre",
+  "static": "build_static",
+  "src": "src",
+  "sprite": "sprite",
+  "staticJs": "/assets/js/",
+  "staticCss": "/assets/css/",
+  "staticImg": "/assets/img/",
+  "staticTpl": "/assets/tpl/",
+  "staticTplhtml": "/assets/tplhtml/"
 }

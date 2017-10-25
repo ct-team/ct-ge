@@ -1,3 +1,8 @@
+/**
+ * 服装模块
+ * @module
+ */
+
 define(function(require) {
 	var initFlag = false,
 		list = require('../../tpl/list'),
@@ -58,7 +63,13 @@ define(function(require) {
 		}else{
 			showErrorTip(data.msg);	
 		}		
-	}	
+	}
+
+    /**
+     *
+     * @param currPage
+     * @param totleNum
+     */
 	function page(currPage,totleNum){
 		$("#page").pages({
 			form:false,
@@ -92,6 +103,9 @@ define(function(require) {
 	}
 	
 	return {
+		/**
+		 * 初始化
+		 */
 		init:init		
 	};
 });
