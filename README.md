@@ -6,7 +6,13 @@ GulpEngineering 能帮你按配置自动合并打包成测试版与正式版，�
 
 ## 版本 
 
-0.1.0
+0.2.0
+
+## 变化
+
+增加图片压缩
+
+增加sass功能
 
 ## 下载地址
 
@@ -28,7 +34,7 @@ github https://github.com/ct-team/ct-ge
   "testStaticUrl": ".org:1505",
   "testUrl": ".org:1507",
   "devUrl": ".org:1506",  
-  "seajs": [
+  "seajs": [  //seajs 配置）
     {
       "Entry": "/assets/js/app/",
       "Out": "/assets/js/app/",
@@ -40,7 +46,8 @@ github https://github.com/ct-team/ct-ge
       "Name": "main.js"
     }
   ],
-  "jsdocFlag": true,
+  "jsdocFlag": true, //jsdoc 是否使用
+  "imgMinFlag": true,//图片压缩是否使用
   "jsdoc": "jsdoc",
   "build": "build",
   "dev": "build_dev",

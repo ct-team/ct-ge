@@ -21,6 +21,7 @@
     }
   ],
   "jsdocFlag": true,
+  "imgMinFlag": true,
   "jsdoc": "jsdoc",
   "build": "build",
   "dev": "build_dev",
@@ -30,6 +31,7 @@
   "static": "build_static",
   "src": "src",
   "sprite": "sprite",
+  "staticSass": "/assets/scss/",
   "staticJs": "/assets/js/",
   "staticCss": "/assets/css/",
   "staticImg": "/assets/img/",

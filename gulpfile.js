@@ -17,16 +17,37 @@ var concat = require('gulp-concat');
 var arrayOfSquares = [];
 var config = require('./gulpConfig.json');
 var replaceUrl = config.replaceUrl;
+var smushit = require('gulp-smushit');
+var sass = require('gulp-sass');
 
 gulp.task('help', function() {
 	console.log('htmltpl:模板脚本化');
 	console.log('jshint:js检测');
 	console.log('sprite:生成雪碧图');
 });
-
+//图片压缩
+gulp.task('imgMin', function () {
+    if(!config.imgMinFlag){
+        return gulp;
+    }
+	return gulp.src(config.src+config.staticImg+'/**/*.{jpg,png}')
+		.pipe(smushit())
+		.pipe(gulp.dest(config.test+config.staticImg));
+});
+//sass
+gulp.task('sass', function(){
+    return gulp.src(config.src+config.staticSass+'*.scss')
+        .pipe(sass({loadPath:config.src+config.staticCss}))
+        .pipe(gulp.dest(config.src+config.staticCss))
+});
+//sass 自动检测
+gulp.task('sass:watch', function () {
+    gulp.watch(config.src+config.staticSass+'*.scss', ['sass']);
+});
+//jsdoc
 gulp.task('jsdoc',function () {
 	if(!config.jsdocFlag){
-		return;
+		return gulp;
 	}
 	return gulp.src(config.src+config.staticJs+"**/*.js")
 		.pipe(jsdoc('jsdoc'))
@@ -209,4 +230,4 @@ gulp.task('revallcss',function () {
 
 
 //开发源代码生成
-gulp.task('default',gulpSequence(['clean-test','clean-build','clean-static','clean-pre','clean-testStatic','clean-dev','clean-jsdoc'],'build','clean-seajs','clean-sprite','clean-tplhtml','htmltpl','seajscombo2','useref','replace-htmlUrlTest',['copy','copy-seajs2'],['copy-static','copy-dev','copy-pre','copy-testStatic'],['replace-test','replace-static','replace-testStatic','replace-dev','replace-pre'],'clean-build','jshint','jsdoc'));
+gulp.task('default',gulpSequence(['clean-test','clean-build','clean-static','clean-pre','clean-testStatic','clean-dev','clean-jsdoc'],'build','clean-seajs','clean-sass','clean-sprite','clean-tplhtml','htmltpl','sass','seajscombo2','useref','imgMin','replace-htmlUrlTest',['copy','copy-seajs2'],['copy-static','copy-dev','copy-pre','copy-testStatic'],['replace-test','replace-static','replace-testStatic','replace-dev','replace-pre'],'clean-build','jshint','jsdoc'));
