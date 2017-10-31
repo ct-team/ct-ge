@@ -5,7 +5,7 @@
 
 define(function(require) {
 	var initFlag = false,
-		list = require('../../tpl/list'),
+		list = require('../tpl/list'),
 		common = require('./common'),
 		getClothes = require('./getClothes'),
 		tryClothes = require('./try'),

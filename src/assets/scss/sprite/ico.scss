@@ -1,0 +1,65 @@
+$url:"../img/ee/ico.png";
+
+
+@mixin _icon-eerr1{
+  background-image:url($url);
+  background-position:0px  0px ; 
+  width:106px ; 
+  height:109px ; 
+}
+
+@mixin _icon-eerr2{
+  background-image:url($url);
+  background-position:-111px  0px ; 
+  width:106px ; 
+  height:109px ; 
+}
+
+@mixin _icon-eerr3{
+  background-image:url($url);
+  background-position:-222px  0px ; 
+  width:106px ; 
+  height:109px ; 
+}
+
+@mixin _icon-eerr4{
+  background-image:url($url);
+  background-position:-333px  0px ; 
+  width:106px ; 
+  height:109px ; 
+}
+
+@mixin _icon-eerr5{
+  background-image:url($url);
+  background-position:-444px  0px ; 
+  width:106px ; 
+  height:109px ; 
+}
+
+@mixin _icon-eerr6{
+  background-image:url($url);
+  background-position:-555px  0px ; 
+  width:106px ; 
+  height:109px ; 
+}
+
+@mixin _icon-eerr7{
+  background-image:url($url);
+  background-position:-666px  0px ; 
+  width:106px ; 
+  height:109px ; 
+}
+
+@mixin _icon-eerr8{
+  background-image:url($url);
+  background-position:-777px  0px ; 
+  width:106px ; 
+  height:109px ; 
+}
+
+@mixin _icon-eerr9{
+  background-image:url($url);
+  background-position:-888px  0px ; 
+  width:106px ; 
+  height:109px ; 
+}

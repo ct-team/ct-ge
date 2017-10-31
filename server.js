@@ -1,4 +1,4 @@
-var version = "2.0.0";
+var version = "2.0.1";
 var http = require('http');        // Http服务器API
 var fs = require('fs');            // 用于处理本地文件
 var server = new http.Server();    // 创建新的HTTP服务器
@@ -41,14 +41,15 @@ function httpGet(url, request, callback) {
     });
     req.end();
 }
-function httpPost(url, request, callback) {
-    var postdata = "";
-    request.addListener("data", function (postchunk) {
-        postdata += postchunk;
+function httpPost(url,request, postData, callback) {
+    postDeal(url,request, callback, postData);
+    /*request.on("data", function (chunk) {
+        console.log(chunk);
+        postData += chunk;
     });
-    request.addListener("end", function () {
-        return postDeal(url, callback, postdata);
-    });
+    request.on("end", function () {
+        return postDeal(url, callback, postData);
+    });*/
 
 }
 function jsonOut(response, data) {
@@ -81,16 +82,19 @@ function getType(endTag) {
     }
     return type;
 }
-function postDeal(url, callback, postdata) {
-    var postData = postdata;
-    console.log(postData);
+function postDeal(url, request,callback, postData) {
+    var contentType = 'application/x-www-form-urlencoded';
+    if(httpOpt.postControlAllow){
+        contentType = 'application/json';
+    }
     var opt = {
             host: httpOpt.host,
             port: httpOpt.port,
             path: url,
             method: 'POST',
             headers: {
-                "Content-Type": 'application/x-www-form-urlencoded',
+                cookie: request.headers.cookie,
+                "Content-Type": contentType,
                 "Content-Length": postData.length
             }
         },
@@ -116,7 +120,7 @@ function getUrlObject(url, arg) {
         object = dataConfig.dataList,
         r = false;
     for (i = 0; i < object.length; i++) {
-        if (object[i].url == url && argCheck(arg,object[i].arg)) {
+        if (object[i].url == url && argCheck(arg, object[i].arg)) {
             r = object[i];
             break;
         }
@@ -124,16 +128,16 @@ function getUrlObject(url, arg) {
     return r;
 }
 function argCheck(urlArg, configArg) {
-    if (configArg === '' ) {
+    if (configArg === '') {
         return true;
     }
     var argObj = parseQueryString(urlArg);
-    if(typeof argObj !== typeof configArg){
+    if (typeof argObj !== typeof configArg) {
         console.log('argCheck 参数类型不一致');
         return false;
     }
-    for(var i in configArg){
-        if(configArg[i] !== argObj[i]){
+    for (var i in configArg) {
+        if (configArg[i] !== argObj[i]) {
             return false;
         }
     }
@@ -229,7 +233,7 @@ function debugHandle(method, url, response, request, arg) {
     }
 
     if (method == "post") {
-        httpPost(url.path, request, function (data) {
+        httpPost(url.path,request, arg, function (data) {
             jsonOut(response, data);
         });
     } else {

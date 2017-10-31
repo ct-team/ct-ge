@@ -5,7 +5,7 @@
   "testStaticUrl": ".org:1505",
   "testUrl": ".org:1507",
   "devUrl": ".org:1506",
-  "htmlUrl": "assets/",
+  "htmlUrl": "./assets/",
   "htmlReplaceUrl": "//static.tcy365",
   "htmlAssetsUrl": "/uc/tt/assets/",
   "seajs": [
@@ -20,8 +20,38 @@
       "Name": "main.js"
     }
   ],
+  "spritesList": [
+    {
+      "url": "ico/*.png",
+      "out": "ee/",
+      "algorithm": "left-right",
+      "imgName": "ico.png",
+      "cssName": "ico.scss"
+    },
+    {
+      "url": "input/*.png",
+      "out": "input/",
+      "algorithm": "binary-tree",
+      "imgName": "input.png",
+      "cssName": "input.scss"
+    },
+    {
+      "url": "close*.png",
+      "out": "",
+      "algorithm": "binary-tree",
+      "imgName": "close.png",
+      "cssName": "close.scss"
+    },
+    {
+      "url": "ieot*.png",
+      "out": "",
+      "algorithm": "binary-tree",
+      "imgName": "ieot.png",
+      "cssName": "ieot.scss"
+    }
+  ],
   "jsdocFlag": true,
-  "imgMinFlag": true,
+  "imgMinFlag": false,
   "jsdoc": "jsdoc",
   "build": "build",
   "dev": "build_dev",
@@ -29,12 +59,15 @@
   "testStatic": "build_testStatic",
   "pre": "build_pre",
   "static": "build_static",
+  "dist": "build_dist",
   "src": "src",
-  "sprite": "sprite",
   "staticSass": "/assets/scss/",
   "staticJs": "/assets/js/",
   "staticCss": "/assets/css/",
   "staticImg": "/assets/img/",
-  "staticTpl": "/assets/tpl/",
-  "staticTplhtml": "/assets/tplhtml/"
+  "staticTpl": "/assets/js/tpl/",
+  "staticTplhtml": "/assets/tplhtml/",
+  "spriteImg": "/assets/sprite/",
+  "spriteOutSrc": "../img/",
+  "spriteTemplate": "/assets/spritetemp/handlebarsStr.scss"
 }

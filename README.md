@@ -8,11 +8,23 @@ GulpEngineering 能帮你按配置自动合并打包成测试版与正式版，�
 
 0.2.0
 
-## 变化
+## 功能
 
-增加图片压缩
+图片压缩
 
-增加sass功能
+sass
+
+雪碧图
+
+html模板转js模板 到js/tpl/
+
+seajs打包 （不要有重名文件）
+
+生成6个版本 （本地|开发|提测|稳定测试|预发|正式）
+
+jsdoc
+
+jshint
 
 ## 下载地址
 
@@ -23,18 +35,63 @@ github https://github.com/ct-team/ct-ge
 执行 npm install 安装
 
 ## 文件夹说明
+
+css //样式
+
+img //生成后图片
+
+js //脚本
+
+scss //sass
+
+sprite //图片
+
+spritetemp //图片合并模板（不建议修改）
+
+tplhtml //html模板
+
+
+## 合并说明
+
+通过build 可以在页面上方便把要合并的资源进行合并 放到指定的路径 并不影响src的测试
+
 ```
+//样式合并
+<!--build:css ./assets/css/main.min.css -->
+<link href="./assets/css/base.css" rel="stylesheet" type="text/css">
+<link href="./assets/css/side.css" rel="stylesheet" type="text/css">
+<link href="./assets/css/main.css" rel="stylesheet" type="text/css">
+<link href="./assets/css/pages.css" rel="stylesheet" type="text/css">
+<link href="./assets/css/pop.css" rel="stylesheet" type="text/css">
+<link href="./assets/css/vip.css" rel="stylesheet" type="text/css">
+<!-- endbuild -->
+
+//脚本合并
+<!--build:js ./assets/js/app.min.js -->
+<script src="./assets/js/lib/pages.js" type="text/javascript"></script>
+<script src="./assets/js/lib/slider.js" type="text/javascript"></script>
+<script src="./assets/js/config.js"></script>
+<!-- endbuild -->
+
+```
+
+## 配置说明
+
+配置文件gulpConfig.json
+
+```
+
 {
-  "htmlUrl": "assets/", //页面资源标识（页面替换）
-  "htmlReplaceUrl": "//static.tcy365", //资源站路径
-  "htmlAssetsUrl": "/uc/tt/", //资源站项目文件夹
-  "replaceUrl": "[TCYURL]", //资源站端口标识（全局替换）
+  "replaceUrl": "[TCYURL]",//资源站端口标识（全局替换）
   "staticUrl": ".com",
   "preUrl": ".com:2505",
   "testStaticUrl": ".org:1505",
   "testUrl": ".org:1507",
-  "devUrl": ".org:1506",  
-  "seajs": [  //seajs 配置）
+  "devUrl": ".org:1506",
+  "htmlUrl": "./assets/",//页面资源标识（页面替换）
+  "htmlReplaceUrl": "//static.tcy365",//资源站路径（需要修改）
+  "htmlAssetsUrl": "/uc/tt/assets/",//资源站项目文件夹
+  "seajs": [   //seajs 配置（需要修改）
     {
       "Entry": "/assets/js/app/",
       "Out": "/assets/js/app/",
@@ -46,8 +103,18 @@ github https://github.com/ct-team/ct-ge
       "Name": "main.js"
     }
   ],
-  "jsdocFlag": true, //jsdoc 是否使用
-  "imgMinFlag": true,//图片压缩是否使用
+
+  "spritesList": [ //雪碧图（需要修改）
+      {
+        "url": "ico/*.png", //路径 assets/sprite
+        "out": "ee/", //路径 assets/img
+        "algorithm": "left-right",//显示方式 4种 top-down left-right diagonal alt-diagonal binary-tree(推荐)
+        "imgName": "ico.png", //生成的文件名
+        "cssName": "ico.scss" //生成的 sass 路径 assets/sprite/
+      }
+  ],
+  "jsdocFlag": true,//是否使用jsdoc
+  "imgMinFlag": true,//是否压缩图片
   "jsdoc": "jsdoc",
   "build": "build",
   "dev": "build_dev",
@@ -55,58 +122,27 @@ github https://github.com/ct-team/ct-ge
   "testStatic": "build_testStatic",
   "pre": "build_pre",
   "static": "build_static",
+  "dist":"build_dist",
   "src": "src",
-  "sprite": "sprite",
+  "staticSass": "/assets/scss/",
   "staticJs": "/assets/js/",
   "staticCss": "/assets/css/",
   "staticImg": "/assets/img/",
-  "staticTpl": "/assets/tpl/",
-  "staticTplhtml": "/assets/tplhtml/"
+  "staticTpl": "/assets/js/tpl/",
+  "staticTplhtml": "/assets/tplhtml/",
+  "spriteImg":"/assets/sprite/",
+  "spriteOutSrc":"../img/",
+  "spriteTemplate":"/assets/spritetemp/handlebarsStr.scss"
 }
-```
-## 合并说明
 
-通过build 可以在页面上方便把要合并的资源进行合并 放到指定的路径 并不影响src的测试
-
-```
-//样式合并
-<!--build:css assets/css/main.min.css -->
-<link href="assets/css/base.css" rel="stylesheet" type="text/css">
-<link href="assets/css/side.css" rel="stylesheet" type="text/css">
-<link href="assets/css/main.css" rel="stylesheet" type="text/css">
-<link href="assets/css/pages.css" rel="stylesheet" type="text/css">
-<link href="assets/css/pop.css" rel="stylesheet" type="text/css">
-<link href="assets/css/vip.css" rel="stylesheet" type="text/css">
-<!-- endbuild -->
-
-//脚本合并
-<!--build:js assets/js/app.min.js -->
-<script src="assets/js/lib/pages.js" type="text/javascript"></script>
-<script src="assets/js/lib/slider.js" type="text/javascript"></script>
-<script src="assets/js/config.js"></script>
-<!-- endbuild -->
-
-```
-
-## 配置说明
-
-配置文件gulpConfig.json
-
-```
-// 需要你修改的地方
-
-"htmlAssetsUrl": "/uc/tt/", //资源站项目文件夹
-// js/app seajs打包配置 多个页面可创建多个app
-"seajs":[
-	{"Entry":"/assets/js/app/","Out":"/assets/js/app/","Name":"main.js"},
-	{"Entry":"/assets/js/app2/","Out":"/assets/js/app2/","Name":"main.js"}
-],	
 
 ```
 
 ## 生成
 
 执行gulp
+
+生成build_dist 本地版
 
 生成build_dev 开发版
 

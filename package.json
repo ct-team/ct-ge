@@ -27,6 +27,7 @@
     "gulp-seajs-combo": "^1.2.3",
     "gulp-sequence": "^0.4.6",
     "gulp-smushit": "^1.2.0",
+    "gulp-spritesmith": "0.0.2",
     "gulp-template": "^4.0.0",
     "gulp-tmod": "^2.0.3",
     "gulp-uglify": "^2.0.0",

@@ -6,13 +6,14 @@
 		 "host":"vip.tcy365.org",
 		 "port":1505,
 		 "serverPort": 8000,
+		 "postControlAllow": false,
 		 "debug":true
 	 },	 
      "dataList" : [
 	 	{
 			"url":"/FreeCloth/List",
 			"type":"get",
-			"arg":{},
+			"arg":"",
 		 	"data":{"data":{"list":[{"image":"http://fdsimg.tcy365.com/tcpcmall/ct0-0dba9b15-b72a-47d8-85ca-db0386e80c4e.png","itemId":10010,"itemName":"小帅小帅哥小帅哥小帅哥哥","memLevel":2,"obtained":true,"portrait":"http://fdsimg.tcy365.com/tcpcmall/ct0-0dba9b15-b72a-47d8-85ca-db0386e80c4e.png","unitName":"一个月"},{"image":"http://fdsimg.tcy365.com/tcpcmall/ct0-0dba9b15-b72a-47d8-85ca-db0386e80c4e.png","itemId":10017,"itemName":"花样年华","memLevel":2,"obtained":false,"portrait":"http://fdsimg.tcy365.com/tcpcmall/ct0-0dba9b15-b72a-47d8-85ca-db0386e80c4e.png","unitName":"一个月（2）"},{"image":"http://fdsimg.tcy365.com/tcpcmall/ct0-0dba9b15-b72a-47d8-85ca-db0386e80c4e.png","itemId":10018,"itemName":"成吉思汗","memLevel":2,"obtained":false,"portrait":"http://fdsimg.tcy365.com/tcpcmall/ct0-0dba9b15-b72a-47d8-85ca-db0386e80c4e.png","unitName":"一个月"},{"image":"http://fdsimg.tcy365.com/tcpcmall/ct0-0dba9b15-b72a-47d8-85ca-db0386e80c4e.png","itemId":10019,"itemName":"华筝","memLevel":2,"obtained":false,"portrait":"http://fdsimg.tcy365.com/tcpcmall/ct0-0dba9b15-b72a-47d8-85ca-db0386e80c4e.png","unitName":"一个月"},{"image":"http://fdsimg.tcy365.com/tcpcmall/ct0-0dba9b15-b72a-47d8-85ca-db0386e80c4e.png","itemId":10027,"itemName":"小狐猫","memLevel":2,"obtained":false,"portrait":"http://fdsimg.tcy365.com/tcpcmall/ct0-0dba9b15-b72a-47d8-85ca-db0386e80c4e.png","unitName":"一周"}],"totalRecord":5,"truePageIndex":1},"status":1,"msg":""}
 
 
@@ -20,7 +21,7 @@
 		{
 			"url":"/FreeCloth/RequestCloth",
 			"type":"get",
-			"arg":{},
+			"arg":"",
 		 	"data":{"status":1,"data":-7,"msg":""}
 
 
@@ -28,7 +29,7 @@
 		{
 			"url":"/FreeCloth/IsMember",
 			"type":"get",
-			"arg":{},
+			"arg":"",
 		 	"data":{"status":1,"data":-1,"msg":""}
 
 

@@ -8,3 +8,4 @@ build_pre
 build_static
 build_test
 build_testStatic
+build_dist

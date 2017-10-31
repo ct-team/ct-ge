@@ -1,0 +1,44 @@
+$url:"../img/close.png";
+
+
+@mixin _icon-close1{
+  background-image:url($url);
+  background-position:0px  0px ; 
+  width:52px ; 
+  height:52px ; 
+}
+
+@mixin _icon-close2{
+  background-image:url($url);
+  background-position:-114px  0px ; 
+  width:26px ; 
+  height:26px ; 
+}
+
+@mixin _icon-close3{
+  background-image:url($url);
+  background-position:-114px  -31px ; 
+  width:26px ; 
+  height:26px ; 
+}
+
+@mixin _icon-close4{
+  background-image:url($url);
+  background-position:0px  -57px ; 
+  width:40px ; 
+  height:40px ; 
+}
+
+@mixin _icon-close5{
+  background-image:url($url);
+  background-position:-45px  -57px ; 
+  width:40px ; 
+  height:40px ; 
+}
+
+@mixin _icon-close6{
+  background-image:url($url);
+  background-position:-57px  0px ; 
+  width:52px ; 
+  height:52px ; 
+}

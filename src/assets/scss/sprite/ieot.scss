@@ -1,0 +1,16 @@
+$url:"../img/ieot.png";
+
+
+@mixin _icon-ieot11{
+  background-image:url($url);
+  background-position:0px  0px ; 
+  width:147px ; 
+  height:49px ; 
+}
+
+@mixin _icon-ieot28{
+  background-image:url($url);
+  background-position:0px  -54px ; 
+  width:147px ; 
+  height:49px ; 
+}
