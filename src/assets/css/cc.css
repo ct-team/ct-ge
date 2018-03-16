@@ -1,0 +1,18 @@
+.a {
+  border-radius: 5px; }
+
+.gppd {
+  background-image: -webkit-gradient(linear, right top, left top, from(#fff), to(#000));
+  background-image: linear-gradient(to left, #fff, #000); }
+
+.g {
+  background: #fff; }
+
+.gppd {
+  background-image: -webkit-gradient(linear, right top, left top, from(#fff), to(#000));
+  background-image: linear-gradient(to left, #fff, #000);
+  clear: none; }
+
+/*# sourceMappingURL=cc.css.map */
+
+/*# sourceMappingURL=cc.css.map */

@@ -1,20 +1,22 @@
 var version = "2.0.1";
 var http = require('http');        // Http服务器API
 var fs = require('fs');            // 用于处理本地文件
+var hotUpdate = require('hot-update');
 var server = new http.Server();    // 创建新的HTTP服务器
 var httpOpt;
 var dataConfig;
-fs.readFile('./serverPackage.json', function (err, data) {
-    if (err) {
-        throw err;
-    }
-    dataConfig = JSON.parse(data);
-    httpOpt = dataConfig.config;
-    var port = httpOpt.serverPort || 8000;
-    server.listen(port);            // 监听端口8000
-    start();
-    console.log('start port:' + port);
-});
+
+// fs.readFile('./serverPackage.json', function (err, data) {
+//     if (err) {
+//         throw err;
+//     }
+//     dataConfig = JSON.parse(data);
+//     httpOpt = dataConfig.config;
+//     var port = httpOpt.serverPort || 8000;
+//     server.listen(port);            // 监听端口8000
+//     start();
+//     console.log('start port:' + port);
+// });
 
 function httpGet(url, request, callback) {
     var opt = {
@@ -242,3 +244,16 @@ function debugHandle(method, url, response, request, arg) {
         });
     }
 }
+
+function init() {
+    var port = 8000;
+
+    dataConfig = hotUpdate('./serverPackage.json');
+    httpOpt = dataConfig.config;
+    port = httpOpt.serverPort || port;
+    server.listen(port);            // 监听端口8000
+    start();
+    console.log('start port:' + port);
+}
+
+init();

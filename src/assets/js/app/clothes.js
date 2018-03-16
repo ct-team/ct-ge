@@ -15,18 +15,19 @@ define(function(require) {
 		if(initFlag){return;}
 		initFlag = true;
 		grade.init(gradeCallback);
-		getData(1,0);
+		getData(1, 0);
+	console.log();
 	}
 	function gradeCallback(level){
 		getData(1,level);
 	}
-	function loading(flag){		
+	function loading(flag){
 		if(flag){
 			$content.empty();
-			$content.addClass('loading');	
+			$content.addClass('loading');
 		}else{
 			$content.removeClass('loading');
-		}		
+		}
 	}
 	function getData(currPage,level){
 		loading(true);
@@ -37,15 +38,15 @@ define(function(require) {
 			data:{page:currPage,pageSize:8,filterLevel:level},
 			type: 'get',
 			success:function(data){
-				success(data);				
+				success(data);
 			},
 			error:function(){
 				showErrorTip("系统繁忙，请稍后重试！");
 			},
 			complete: function(){
 				loading(false);
-			}	
-		});	
+			}
+		});
 	}
 	function success(data){
 		var render,html;
@@ -53,16 +54,16 @@ define(function(require) {
 			if(data.data){
 				render = template.compile(list);
 				html = render(data.data);
-				$content.html(html);			
+				$content.html(html);
 				page(data.data.truePageIndex,data.data.totalRecord);
-				bind();	
+				bind();
 			}else{
-				showErrorTip("没有内容");	
+				showErrorTip("没有内容");
 			}
-							
+
 		}else{
-			showErrorTip(data.msg);	
-		}		
+			showErrorTip(data.msg);
+		}
 	}
 
     /**
@@ -76,11 +77,11 @@ define(function(require) {
 			tpl:{up:'&lt;',down:'&gt;'},
 			currPage:currPage, //当前页码
 			pageLen:8,//每页数量
-			totleNum:totleNum, //总数量            
+			totleNum:totleNum, //总数量
 			callback:function(n){
 				getData(n,grade.getLevel());
 			}
-		});	
+		});
 	}
 	function showErrorTip(str){
 		$content.html('<div class="error-tip">'+str+'</div>');
@@ -89,7 +90,7 @@ define(function(require) {
 		var id,title,url,subid;
 		$('.J_btn_buy').click(function(){
 			if($(this).hasClass('btn-buy-no')){
-				return false;	
+				return false;
 			}
 			id = $(this).parents('li').attr('data-id');
 			title = $(this).parents('li').find('.J_list_name').html();
@@ -101,11 +102,11 @@ define(function(require) {
 			return false;
 		});
 	}
-	
+
 	return {
 		/**
 		 * 初始化
 		 */
-		init:init		
+		init:init
 	};
 });
